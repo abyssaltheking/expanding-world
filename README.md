@@ -8,7 +8,9 @@ Simplicity, mainly. I find C++ to be really complex for me. I can understand bit
 
 ## Building
 
-I kept it simple, as this is my first ever Makefile, and my first time using a build system, and also my first project in C. Anyway, here are the commands
+I kept it simple, as this is my first ever Makefile, and my first time using a build system, and also my first project in C.
+
+Anyway, here are the commands:
 
 ```bash
 $ make       # builds to build/
