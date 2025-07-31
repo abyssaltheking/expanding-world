@@ -1,9 +1,9 @@
 CC=clang
 CFLAGS=
-LIBS=-lglfw -lGL
+LIBS=-lSDL3
 OUTNAME=idfk.o
 
-SRC=$(wildcard src/*.c) libs/glad/glad.c
+SRC=$(wildcard src/*.c) $(wildcard src/**/*.c)
 
 all:
 	mkdir -p build

@@ -19,3 +19,16 @@ $ make clean # deletes everything in build
 $ make quick # builds, then runs
 $ make debug # runs the executable in build/ with valguard for debugging, requires valguard to use
 ```
+
+## TODO
+
+### Engine
+- [ ] Create an input header file
+    - [ ] bool isKeyPressed(key) -> returns true if yes
+    - [ ] Make sure that key presses don't have the issue where it hesitates for a second before continuing input
+- [ ] Start on graphics
+    - [ ] typedef Struct Sprite -> just a texture with position & size values for the most part
+        - [ ] please for the love of god use SDL_image i am NOT converting all my images to bmps
+
+### Game
+- yeah ill fill this out when i get a good idea, not yet though
