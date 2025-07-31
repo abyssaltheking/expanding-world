@@ -1,6 +1,6 @@
 # Expanding World
 
-This is a simple game project to get acquainted with C and OpenGL. This uses my own custom engine, written entirely in my own makeshift, handcrafted C, using as few dependencies as possible. Currently in heavy construction. Don't expect anything much anytime soon, but feel free to review the code yourself.
+This is a simple game project to get acquainted with C and SDL3. This uses my own custom engine, written entirely in my own makeshift, handcrafted C, using as few dependencies as possible. Currently in heavy construction. Don't expect anything much anytime soon, but feel free to review the code yourself.
 
 ## Why C over C++ or literally any other language that's not 53 years old?
 
@@ -17,5 +17,5 @@ $ make       # builds to build/
 $ make run   # runs the executable in build/
 $ make clean # deletes everything in build
 $ make quick # builds, then runs
-$ make debug # runs the executable in build/ with valguard for debugging
+$ make debug # runs the executable in build/ with valguard for debugging, requires valguard to use
 ```
