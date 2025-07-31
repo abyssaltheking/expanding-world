@@ -24,10 +24,10 @@ $ make debug # runs the executable in build/ with valguard for debugging, requir
 
 ### Engine
 - [ ] Create an input header file
-    - [ ] bool isKeyPressed(key) -> returns true if yes
+    - [ ] `bool isKeyPressed(key)` -> returns true if yes
     - [ ] Make sure that key presses don't have the issue where it hesitates for a second before continuing input
 - [ ] Start on graphics
-    - [ ] typedef Struct Sprite -> just a texture with position & size values for the most part
+    - [ ] `typedef Struct Sprite` -> just a texture with position & size values for the most part
         - [ ] please for the love of god use SDL_image i am NOT converting all my images to bmps
 
 ### Game
