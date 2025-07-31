@@ -1,9 +1,9 @@
 CC=clang
 CFLAGS=
-LIBS=-lcsfml-window -lGL
+LIBS=-lglfw -lGL
 OUTNAME=idfk.o
 
-SRC=$(wildcard src/*.c)
+SRC=$(wildcard src/*.c) libs/glad/glad.c
 
 all:
 	mkdir -p build
@@ -11,6 +11,9 @@ all:
 
 run:
 	./build/$(OUTNAME)
+
+debug:
+	valgrind ./build/$(OUTNAME)
 
 quick:
 	mkdir -p build
