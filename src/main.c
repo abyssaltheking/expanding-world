@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include "engine.h"
 
+const int window_width = 1280;
+const int window_height = 720;
+
 int main() {
     Window window = createWindow("hi", 1280, 720);
     if (!validateWindow(window)) return -1;
@@ -9,13 +12,14 @@ int main() {
     SDL_SetRenderVSync(window.renderer, 1);
 
     Sprite sprite = createSprite(window.renderer, "assets/player.png", 50, 50);
+    sprite.x = ((window_width / 2) - (sprite.width / 2));
+    sprite.y = ((window_height / 2) - (sprite.height / 2));
     setSpriteScaleMode(sprite, "nearest");
 
     bool keepWindowOpen = true;
     float color = 0.09f;
 
     while (keepWindowOpen) {
-        getInput(window.event);
         if (windowQuit(window.event) || isKeyDown(SDL_SCANCODE_ESCAPE)) keepWindowOpen = false;
         SDL_FRect spriteRect = spriteToFRect(sprite);
 
