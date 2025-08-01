@@ -1,6 +1,11 @@
-# Expanding World
+# Abysmal Engine
 
-This is a simple game project to get acquainted with C and SDL3. This uses my own custom engine, written entirely in my own makeshift, handcrafted C, using as few dependencies as possible. Currently in heavy construction. Don't expect anything much anytime soon, but feel free to review the code yourself.
+This is a simple game project to get acquainted with C and SDL3. This uses my own custom engine, written entirely in my own makeshift, handcrafted C, using as few dependencies as possible, for better or for worse. This engine is meant to compliment SDL3, so if you decide to use it, beware that you'll also need to use SDL3 for some of the smaller things.
+
+## Game
+A remastering of my first game, [Balance](https://abyssaltheking.itch.io/balance), that will be called Balance: Rebalanced. 
+
+Balance: Rebalanced is a top-down shooter where you must protect the Orb of Balance from rebels, or the entire world will be thrown in chaos. Use your powers to protect the Orb of Balance for as long as you can. If the Orb of Balance breaks, ***run and cower, you cannot escape***.
 
 ## Why C over C++ or literally any other language that's not 53 years old?
 
@@ -23,12 +28,13 @@ $ make debug # runs the executable in build/ with valguard for debugging, requir
 ## TODO
 
 ### Engine
-- [x] Create an input header file
-    - [x] `bool isKeyPressed(key)` -> returns true if yes
-    - [x] Make sure that key presses don't have the issue where it hesitates for a second before continuing input
-- [ ] Start on graphics
-    - [ ] `typedef Struct Sprite` -> just a texture with position & size values for the most part
-        - [ ] please for the love of god use SDL_image i am NOT converting all my images to bmps
+- [ ] Implement basic audio
+    - [ ] [miniaudio](https://miniaud.io) backend
+    - [ ] Allows for simple changes (pitch, volume, reverb?)
+- [ ] Basic physics
+    - [ ] Forces will be added with just simple change to a velocity x & y variable
+    - [ ] AABB collisions 
+- [ ] `typedef struct WorldObject` -> compilation of a physics object & a sprite, possibly more things i might add, should simplify things though
 
 ### Game
-- yeah ill fill this out when i get a good idea, not yet though
+do have an idea now, just need time to think of what to implement

@@ -3,6 +3,7 @@
 #include "window.h"
 
 Window createWindow(char* title, unsigned int width, unsigned int height) {
+    printf("\nWelcome to Abysmal Engine - Version 0.0.1a, now with even more bullshit!\n\n");
     Window window;
     SDL_Init(SDL_INIT_VIDEO);
 

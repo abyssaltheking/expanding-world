@@ -1,13 +1,13 @@
 CC=clang
 CFLAGS=
-LIBS=-lSDL3
+LINK=-lSDL3 -lSDL3_image
 OUTNAME=idfk.o
 
 SRC=$(wildcard src/*.c) $(wildcard src/**/*.c)
 
 all:
 	mkdir -p build
-	$(CC) $(CFLAGS)  $(SRC) $(LIBS) -o build/$(OUTNAME)
+	$(CC) $(CFLAGS) $(SRC) $(LINK) -o build/$(OUTNAME)
 
 run:
 	./build/$(OUTNAME)
@@ -17,7 +17,7 @@ debug:
 
 quick:
 	mkdir -p build
-	$(CC) $(CFLAGS)  $(SRC) $(LIBS) -o build/$(OUTNAME)
+	$(CC) $(CFLAGS) $(SRC) $(LINK) -o build/$(OUTNAME)
 	./build/$(OUTNAME)
 
 clean:
