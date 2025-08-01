@@ -7,7 +7,7 @@ typedef struct {
     SDL_Event event;
 } Window;
 
-Window createWindow(char* title, unsigned int width, unsigned int height);
+Window createWindow(char* title, unsigned int width, unsigned int height, bool vsync);
 bool validateWindow(Window window);
 bool windowQuit(SDL_Event event);
 void destroyWindow(Window window);

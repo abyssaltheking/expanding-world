@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "window.h"
 
-Window createWindow(char* title, unsigned int width, unsigned int height) {
+Window createWindow(char* title, unsigned int width, unsigned int height, bool vsync) {
     printf("\nWelcome to Abysmal Engine - Version 0.0.1a, now with even more bullshit!\n\n");
     Window window;
     SDL_Init(SDL_INIT_VIDEO);
@@ -21,6 +21,8 @@ Window createWindow(char* title, unsigned int width, unsigned int height) {
         SDL_Quit();
     }
     window.renderer = renderer;
+
+    if (vsync) SDL_SetRenderVSync(window.renderer, 1);
 
     SDL_Event event;
     window.event = event;

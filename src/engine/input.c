@@ -1,6 +1,5 @@
 #include <SDL3/SDL.h>
 #include "input.h"
-#include "stdio.h"
 
 int numkeys; 
 

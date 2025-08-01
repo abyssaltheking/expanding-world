@@ -6,10 +6,8 @@ const int window_width = 1280;
 const int window_height = 720;
 
 int main() {
-    Window window = createWindow("hi", 1280, 720);
+    Window window = createWindow("hi", 1280, 720, true);
     if (!validateWindow(window)) return -1;
-
-    SDL_SetRenderVSync(window.renderer, 1);
 
     Sprite sprite = createSprite(window.renderer, "assets/player.png", 50, 50);
     sprite.x = ((window_width / 2) - (sprite.width / 2));
