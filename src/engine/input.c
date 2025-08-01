@@ -5,6 +5,6 @@
 int numkeys; 
 
 bool isKeyDown(SDL_Scancode scancode) {
-    bool* downKeys = SDL_GetKeyboardState(&numkeys);
+    const bool* downKeys = SDL_GetKeyboardState(&numkeys);
     return downKeys[scancode];
 }
