@@ -10,12 +10,14 @@ int main() {
     if (!validateWindow(window)) return -1;
 
     Sprite sprite = createSprite(window.renderer, "assets/player.png", 50, 50);
-    sprite.x = ((window_width / 2) - (sprite.width / 2));
-    sprite.y = ((window_height / 2) - (sprite.height / 2));
+    sprite.x = ((float)window_width / 2) - (sprite.width / 2);
+    sprite.y = ((float)window_height / 2) - (sprite.height / 2);
     setSpriteScaleMode(sprite, "nearest");
 
     bool keepWindowOpen = true;
-    float color = 0.09f;
+    float color = 0.15f;
+
+    AudioEngine audio = initAudio();
 
     while (keepWindowOpen) {
         if (windowQuit(window.event) || isKeyDown(SDL_SCANCODE_ESCAPE)) keepWindowOpen = false;
@@ -32,6 +34,7 @@ int main() {
         SDL_RenderPresent(window.renderer);
     }
 
+    destroyAudio(audio);
     destroySprite(sprite);
     destroyWindow(window);
     return 0;

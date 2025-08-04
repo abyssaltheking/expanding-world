@@ -30,7 +30,7 @@ $ make debug # runs the executable in build/ with valguard for debugging, requir
 ### Engine
 - [ ] Implement basic audio
     - [ ] [miniaudio](https://miniaud.io) backend
-    - [ ] Allows for simple changes (pitch, volume, reverb?)
+    - [ ] Allows for simple changes (pitch, volume, panning for certain)
 - [ ] Basic physics
     - [ ] Forces will be added with just simple change to a velocity x & y variable
     - [ ] AABB collisions 
